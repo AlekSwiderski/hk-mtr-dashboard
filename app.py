@@ -12,7 +12,6 @@ import json
 # Page config
 st.set_page_config(
     page_title="Hong Kong MTR Dashboard",
-    page_icon="🚇",
     layout="wide"
 )
 
@@ -32,7 +31,7 @@ def load_data():
 stations, ridership, line_stats, fares, summary = load_data()
 
 # Header
-st.title("🚇 Hong Kong MTR Analytics Dashboard")
+st.title("Hong Kong MTR Analytics Dashboard")
 st.markdown("*Exploring Hong Kong's Mass Transit Railway system through data*")
 st.markdown("---")
 
@@ -56,7 +55,7 @@ with col4:
 st.markdown("---")
 
 # Tabs for different sections
-tab1, tab2, tab3, tab4 = st.tabs(["📊 Network Overview", "💰 Fare Calculator", "📈 Ridership Trends", "♿ Accessibility"])
+tab1, tab2, tab3, tab4 = st.tabs(["Network Overview", "Fare Calculator", "Ridership Trends", "Accessibility"])
 
 # TAB 1: Network Overview
 with tab1:
@@ -215,7 +214,7 @@ with tab3:
 
 # TAB 4: Accessibility
 with tab4:
-    st.header("♿ Accessibility Information")
+    st.header("Accessibility Information")
 
     st.info(f"**{summary['total_accessibility_records']:,}** barrier-free facility records across the MTR network")
 
@@ -241,6 +240,6 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #7f8c8d;'>
     <p>Data Source: DATA.GOV.HK | Transport Department Hong Kong</p>
-    <p>Dashboard created by Alek Swiderski | December 2024</p>
+    <p>Dashboard created by Alek Swiderski | December 2025</p>
 </div>
 """, unsafe_allow_html=True)
