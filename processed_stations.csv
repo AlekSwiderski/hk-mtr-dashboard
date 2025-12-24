@@ -1,0 +1,102 @@
+﻿Station ID,Station Code,Chinese Name,English Name,Line Code
+56.0,AWE,博覽館,AsiaWorld-Expo,AEL
+47.0,AIR,機場,Airport,AEL
+46.0,TSY,青衣,Tsing Yi,AEL
+45.0,KOW,九龍,Kowloon,AEL
+44.0,HOK,香港,Hong Kong,AEL
+54.0,SUN,欣澳,Sunny Bay,DRL
+55.0,DIS,迪士尼,Disneyland Resort,DRL
+76.0,LOW,羅湖,Lo Wu,EAL
+75.0,SHS,上水,Sheung Shui,EAL
+74.0,FAN,粉嶺,Fanling,EAL
+73.0,TWO,太和,Tai Wo,EAL
+72.0,TAP,大埔墟,Tai Po Market,EAL
+71.0,UNI,大學,University,EAL
+69.0,FOT,火炭,Fo Tan,EAL
+68.0,SHT,沙田,Sha Tin,EAL
+67.0,TAW,大圍,Tai Wai,EAL
+8.0,KOT,九龍塘,Kowloon Tong,EAL
+65.0,MKK,旺角東,Mong Kok East,EAL
+64.0,HUH,紅磡,Hung Hom,EAL
+94.0,EXC,會展,Exhibition Centre,EAL
+2.0,ADM,金鐘,Admiralty,EAL
+78.0,LMC,落馬洲,Lok Ma Chau,EAL
+37.0,CHW,柴灣,Chai Wan,ISL
+36.0,HFC,杏花邨,Heng Fa Chuen,ISL
+35.0,SKW,筲箕灣,Shau Kei Wan,ISL
+34.0,SWH,西灣河,Sai Wan Ho,ISL
+33.0,TAK,太古,Tai Koo,ISL
+32.0,QUB,鰂魚涌,Quarry Bay,ISL
+31.0,NOP,北角,North Point,ISL
+30.0,FOH,炮台山,Fortress Hill,ISL
+29.0,TIH,天后,Tin Hau,ISL
+28.0,CAB,銅鑼灣,Causeway Bay,ISL
+27.0,WAC,灣仔,Wan Chai,ISL
+1.0,CEN,中環,Central,ISL
+26.0,SHW,上環,Sheung Wan,ISL
+81.0,SYP,西營盤,Sai Ying Pun,ISL
+82.0,HKU,香港大學,HKU,ISL
+83.0,KET,堅尼地城,Kennedy Town,ISL
+49.0,TIK,調景嶺,Tiu Keng Leng,KTL
+48.0,YAT,油塘,Yau Tong,KTL
+38.0,LAT,藍田,Lam Tin,KTL
+15.0,KWT,觀塘,Kwun Tong,KTL
+14.0,NTK,牛頭角,Ngau Tau Kok,KTL
+13.0,KOB,九龍灣,Kowloon Bay,KTL
+12.0,CHH,彩虹,Choi Hung,KTL
+11.0,DIH,鑽石山,Diamond Hill,KTL
+10.0,WTS,黃大仙,Wong Tai Sin,KTL
+9.0,LOF,樂富,Lok Fu,KTL
+7.0,SKM,石硤尾,Shek Kip Mei,KTL
+16.0,PRE,太子,Prince Edward,KTL
+6.0,MOK,旺角,Mong Kok,KTL
+5.0,YMT,油麻地,Yau Ma Tei,KTL
+84.0,HOM,何文田,Ho Man Tin,KTL
+85.0,WHA,黃埔,Whampoa,KTL
+103.0,WKS,烏溪沙,Wu Kai Sha,TML
+102.0,MOS,馬鞍山,Ma On Shan,TML
+101.0,HEO,恆安,Heng On,TML
+100.0,TSH,大水坑,Tai Shui Hang,TML
+99.0,SHM,石門,Shek Mun,TML
+98.0,CIO,第一城,City One,TML
+97.0,STW,沙田圍,Sha Tin Wai,TML
+96.0,CKT,車公廟,Che Kung Temple,TML
+90.0,HIK,顯徑,Hin Keng,TML
+91.0,KAT,啟德,Kai Tak,TML
+92.0,SUW,宋皇臺,Sung Wong Toi,TML
+93.0,TKW,土瓜灣,To Kwa Wan,TML
+80.0,ETS,尖東,East Tsim Sha Tsui,TML
+111.0,AUS,柯士甸,Austin,TML
+53.0,NAC,南昌,Nam Cheong,TML
+20.0,MEF,美孚,Mei Foo,TML
+114.0,TWW,荃灣西,Tsuen Wan West,TML
+115.0,KSR,錦上路,Kam Sheung Road,TML
+116.0,YUL,元朗,Yuen Long,TML
+117.0,LOP,朗屏,Long Ping,TML
+118.0,TIS,天水圍,Tin Shui Wai,TML
+119.0,SIH,兆康,Siu Hong,TML
+120.0,TUM,屯門,Tuen Mun,TML
+43.0,TUC,東涌,Tung Chung,TCL
+42.0,TSY,青衣,Tsing Yi,TCL
+21.0,LAK,茘景,Lai King,TCL
+41.0,OLY,奧運,Olympic,TCL
+40.0,KOW,九龍,Kowloon,TCL
+39.0,HOK,香港,Hong Kong,TCL
+52.0,POA,寶琳,Po Lam,TKL
+51.0,HAH,坑口,Hang Hau,TKL
+50.0,TKO,將軍澳,Tseung Kwan O,TKL
+57.0,LHP,康城,LOHAS Park,TKL
+25.0,TSW,荃灣,Tsuen Wan,TWL
+24.0,TWH,大窩口,Tai Wo Hau,TWL
+23.0,KWH,葵興,Kwai Hing,TWL
+22.0,KWF,葵芳,Kwai Fong,TWL
+19.0,LCK,茘枝角,Lai Chi Kok,TWL
+18.0,CSW,長沙灣,Cheung Sha Wan,TWL
+17.0,SSP,深水埗,Sham Shui Po,TWL
+4.0,JOR,佐敦,Jordan,TWL
+3.0,TST,尖沙咀,Tsim Sha Tsui,TWL
+86.0,OCP,海洋公園,Ocean Park,SIL
+87.0,WCH,黃竹坑,Wong Chuk Hang,SIL
+88.0,LET,利東,Lei Tung,SIL
+89.0,SOH,海怡半島,South Horizons,SIL
+,,,,

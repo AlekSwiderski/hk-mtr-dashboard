@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+.DS_Store
+.streamlit/
+explore_data.py
+analyze_ridership.py
+get_mtr_data.py
+index_clean.html

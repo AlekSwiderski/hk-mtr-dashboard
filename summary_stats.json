@@ -1,0 +1,15 @@
+{
+  "total_stations": 101,
+  "total_lines": 10,
+  "total_fare_combinations": 9216,
+  "fare_stats": {
+    "min": 0.0,
+    "max": 60.8,
+    "avg": 15.642621527777777,
+    "median": 13.3
+  },
+  "total_accessibility_records": 3564,
+  "years_of_data": 11,
+  "latest_year": 2024,
+  "latest_ridership_millions": 11698.0
+}
