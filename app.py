@@ -9,13 +9,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 import json
 
-# Page config
 st.set_page_config(
     page_title="Hong Kong MTR Dashboard",
     layout="wide"
 )
 
-# Load data
 @st.cache_data
 def load_data():
     stations = pd.read_csv('processed_stations.csv')
@@ -30,12 +28,10 @@ def load_data():
 
 stations, ridership, line_stats, fares, summary = load_data()
 
-# Header
 st.title("Hong Kong MTR Analytics Dashboard")
 st.markdown("*Exploring Hong Kong's Mass Transit Railway system through data*")
 st.markdown("---")
 
-# Key Metrics
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -48,16 +44,13 @@ with col3:
     st.metric("Avg Fare", f"${summary['fare_stats']['avg']:.2f}")
 
 with col4:
-    # Fix the ridership display - it's in thousands, so divide by 1000 for millions
     daily_ridership = ridership[ridership['Year'] == ridership['Year'].max()]['Daily_Ridership_Thousands'].values[0] / 1000
     st.metric("Daily Ridership (2024)", f"{daily_ridership:.1f}M")
 
 st.markdown("---")
 
-# Tabs for different sections
 tab1, tab2, tab3, tab4 = st.tabs(["Network Overview", "Fare Calculator", "Ridership Trends", "Accessibility"])
 
-# TAB 1: Network Overview
 with tab1:
     st.header("MTR Network Overview")
 
@@ -66,7 +59,6 @@ with tab1:
     with col1:
         st.subheader("Stations per Line")
 
-        # Bar chart of stations per line
         fig = px.bar(
             line_stats.sort_values('Station_Count', ascending=True),
             x='Station_Count',
@@ -82,7 +74,6 @@ with tab1:
     with col2:
         st.subheader("Line Distribution")
 
-        # Pie chart
         fig = px.pie(
             line_stats,
             values='Station_Count',
@@ -93,10 +84,8 @@ with tab1:
         fig.update_layout(height=400)
         st.plotly_chart(fig, use_container_width=True)
 
-    # Station list
     st.subheader("All MTR Stations")
 
-    # Group by line for display
     selected_line = st.selectbox("Filter by line:", ['All Lines'] + sorted(line_stats['Line_Name'].tolist()))
 
     if selected_line == 'All Lines':
@@ -105,7 +94,6 @@ with tab1:
         line_code = line_stats[line_stats['Line_Name'] == selected_line]['Line_Code'].values[0]
         display_stations = stations[stations['Line Code'] == line_code].sort_values('English Name')
 
-    # Display in columns
     cols = st.columns(3)
     stations_per_col = len(display_stations) // 3 + 1
 
@@ -114,13 +102,11 @@ with tab1:
         with cols[col_idx]:
             st.write(f"**{station['English Name']}** ({station['Chinese Name']})")
 
-# TAB 2: Fare Calculator
 with tab2:
-    st.header("💰 MTR Fare Calculator")
+    st.header("MTR Fare Calculator")
 
     col1, col2 = st.columns(2)
 
-    # Get station lists for dropdowns
     station_names = sorted(fares['SRC_STATION_NAME'].unique())
 
     with col1:
@@ -130,7 +116,6 @@ with tab2:
         destination = st.selectbox("Destination Station:", station_names, key='dest')
 
     if origin and destination:
-        # Look up fare
         fare_row = fares[
             (fares['SRC_STATION_NAME'] == origin) &
             (fares['DEST_STATION_NAME'] == destination)
@@ -154,15 +139,12 @@ with tab2:
         else:
             st.warning("No direct route found between these stations.")
 
-# TAB 3: Ridership Trends
 with tab3:
-    st.header("📈 Public Transport Ridership Trends")
+    st.header("Public Transport Ridership Trends")
     st.info("Note: Data shows overall public transport ridership (MTR, buses, trams, etc.)")
 
-    # Fix ridership data - convert thousands to millions
     ridership['Daily_Ridership_Millions'] = ridership['Daily_Ridership_Thousands'] / 1000
 
-    # Line chart
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(
@@ -174,7 +156,6 @@ with tab3:
         marker=dict(size=8)
     ))
 
-    # Add annotation for COVID
     fig.add_annotation(
         x=2020,
         y=ridership[ridership['Year']==2020]['Daily_Ridership_Millions'].values[0],
@@ -195,7 +176,6 @@ with tab3:
 
     st.plotly_chart(fig, use_container_width=True)
 
-    # Statistics
     col1, col2, col3 = st.columns(3)
 
     with col1:
@@ -212,14 +192,13 @@ with tab3:
         recovery = ((latest - covid_low) / (pre_covid - covid_low)) * 100
         st.metric("Latest (2024)", f"{latest:.2f}M", f"{recovery:.0f}% recovered")
 
-# TAB 4: Accessibility
 with tab4:
     st.header("Accessibility Information")
 
     st.info(f"**{summary['total_accessibility_records']:,}** barrier-free facility records across the MTR network")
 
     st.markdown("""
-    ### Barrier-Free Facilities
+    **Barrier-Free Facilities**
 
     The MTR system provides various accessibility features to assist passengers with disabilities:
 
@@ -235,7 +214,6 @@ with tab4:
 
     st.success("✅ All 100+ MTR stations feature barrier-free access")
 
-# Footer
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #7f8c8d;'>
